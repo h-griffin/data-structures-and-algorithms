@@ -35,7 +35,14 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-    return arr.filter( () => { /\b[^K-Z].*?\b/g} );
+  let newArr = [];
+  arr.forEach(city => {
+    city.replace(' ', '');
+  if (city.search(/\b[J-Z]+[a-z]*\b/g)) {
+    newArr.push(city);
+  }
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -51,7 +58,7 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
+  return /\bO?o?(ct)(ober)?\b/g.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,7 +72,7 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...
+  return str.match(/\b\w*\s/g);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,7 +88,7 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  // Solution code here...
+  return str.replace(/[aeiou]/gi, '_');
 };
 
 /* ------------------------------------------------------------------------------------------------
