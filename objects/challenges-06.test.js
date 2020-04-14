@@ -122,23 +122,19 @@ Write a function named totalCharacters that takes in an array and returns the nu
 
 const totalCharacters = (arr) => {
     let allCharacters = [];
-    arr.forEach( (object) => {
-        if (Object.entries(object)[0][1]){
-            allCharacters.push(object)[0][1]
-        }if (Object.entries(object)[1][1]){
-            allCharacters.push(object)[1][1]
-        }if (Object.entries(object)[2][1]){
-            allCharacters.push(object)[2][1]
-        }
-  });
-  console.log(allCharacters);
-  return allCharacters.length;
+    for (let i = 0; i < arr.length; i++){
+      if (arr[i].name){
+        allCharacters.push(this);
+      }if (arr[i].spouse){
+        allCharacters.push(this);
+      }if (arr[i].children){
+        arr[i].children.forEach( (name) =>{
+          allCharacters.push(this);
+        });
+      }
+    }
+    return allCharacters.length;
 };
-
-const totalCharacters = (arr) => {
-    let allCharacters = [];
-    for (let i = 0; i < arr.length; i++){if}
-}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
