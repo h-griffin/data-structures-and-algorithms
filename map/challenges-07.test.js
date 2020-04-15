@@ -23,7 +23,7 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  newArr = [];
+  let newArr = [];
   arr.forEach( (value) => {
     newArr.push(Math.pow(2, value));
   });
@@ -123,7 +123,7 @@ const snorlaxAbilities = {
 };
 
 const extractAbilities = (arr) => {
-  return arr.map( data => {data.ability.name;});
+  return arr.map(data => data.ability.name);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -170,7 +170,13 @@ const snorlaxStats = {
 };
 
 const extractStats = (arr) => {
-  // Solution code here...
+  let statsArr = arr.map(data => {
+    return{
+    name: data.stat.name,
+    total: (data.baseStat + data.effort)
+    }
+  });
+  return statsArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
