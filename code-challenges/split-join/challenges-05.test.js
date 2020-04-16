@@ -92,8 +92,11 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
+  let ingArr = recipe.ingredients;
   let result = [];
-  // Solution code here...
+  for (let i = 0; i < ingArr.length; i++){
+    
+  }
   return result;
 };
 
