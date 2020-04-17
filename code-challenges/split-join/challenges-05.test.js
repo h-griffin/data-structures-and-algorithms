@@ -92,6 +92,7 @@ You may also use other string or array methods.
 ------------------------------------------------------------------------------------------------ */
 
 const splitFoods = (recipe) => {
+  let ingArr = recipe.ingredients;
   let result = [];
   recipe.ingredients.forEach(ingredient => {
     result.push(ingredient.slice(ingredient.indexOf(ingredient.split(' ')[2])))
