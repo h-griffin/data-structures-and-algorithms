@@ -73,7 +73,6 @@ const gruffaloCrumble = {
   ]
 };
 
-
 const listFoods = (recipe) => {
   let ingArr = recipe.ingredients;
   let result = [];
